@@ -1,0 +1,45 @@
+New Learning Wing Pre School — Web App
+School management web app for New Learning Wing Pre School, Nindura, Barabanki. Admin, Teacher aur Student — teeno ke liye alag dashboard, ek hi app me.
+Setup (pehli baar)
+Node.js (v18+) install hona chahiye. Fir project folder me jaake:
+npm install
+npm run dev
+Terminal me jo link dikhega (usually http://localhost:5173), use browser me kholein.
+Build (deploy karne ke liye)
+npm run build
+Isse dist/ folder banega — usse kisi bhi static hosting (Netlify, Vercel, GitHub Pages, ya school ke server) par upload kar sakte hain.
+Login Details
+Role
+Login ID
+Password
+Admin
+admin
+admin123
+Teacher
+T1 (demo)
+teach123
+Student
+Roll number (e.g. 101)
+1 se 5 tak koi digit (dropdown se chunein)
+Admin ka username/password code me hai (src/App.jsx file me ADMIN_ID aur ADMIN_PASS) — change karna ho to wahin edit karein.
+Features
+Admin — sabhi students aur teachers add/edit/delete; attendance, fees, aur result sab manage kar sakta hai
+Teacher — apni assign ki hui class ke students manage karta hai
+Student — apni attendance %, fees due, result, aur profile dekh sakta hai; khud apna avatar/theme choose kar sakta hai
+Data kahan save hota hai
+Data browser ke localStorage me save hota hai — matlab data usi browser/device par rehta hai jahan se use kiya gaya hai. Agar aapko sabhi devices (admin, teacher, students alag-alag phone/computer se) par ek hi shared data chahiye, to isse ek real database (jaise Firebase, Supabase, ya apna backend) se connect karna hoga — abhi ke liye ye ek chhote, single-device/local use ke liye theek hai.
+Tech Stack
+React + Vite
+Tailwind CSS (CDN se, index.html me)
+lucide-react icons
+Project Structure
+my-school-app/
+├── package.json
+├── vite.config.js
+├── index.html
+├── src/
+│   ├── main.jsx        # React entry point
+│   ├── App.jsx          # Poora app (login + all dashboards)
+│   └── assets/
+├── public/
+└── README.md
